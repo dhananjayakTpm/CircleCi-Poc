@@ -9,7 +9,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - db:50:9e:49:41:48:06:8f:e5:f8:ef:c7:c9:5e:48:c2
+            - 62:b3:b1:c1:7d:56:af:06:db:9b:26:70:98:e2:da:23
       - run:
           name: Setup VirtualEnv
           command: |
@@ -25,7 +25,7 @@ jobs:
             python test_hello_world.py
       - setup_remote_docker:
           docker_layer_caching: true
-       - run:
+      - run:
           name: Build and push Docker image
           command: |
             . helloworld/bin/activate
