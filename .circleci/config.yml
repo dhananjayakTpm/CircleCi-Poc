@@ -32,9 +32,8 @@ jobs:
            
       - run:
           name: Deploy app to Linode Producrion Server via Docker
-          command: |    
-             
-            ssh -vvv 34.68.161.68
+          command: |                 
+          echo  'ssh -vvv 34.68.161.68'
 
           
               
