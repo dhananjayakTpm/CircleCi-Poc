@@ -34,7 +34,8 @@ jobs:
           name: Deploy app to Linode Producrion Server via Docker
           command: |    
              
-             ssh -o BatchMode=yes -o StrictHostKeyChecking=no 34.68.161.68  "uptime"
+            ssh -vvv 34.68.161.68
+
           
               
            
