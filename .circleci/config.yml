@@ -29,11 +29,11 @@ jobs:
           name: Build and push Docker image
           command: |
             . helloworld/bin/activate
-            pyinstaller -F hello_world.py
+            
            
       - run:
           name: Deploy app to Linode Producrion Server via Docker
           command: |    
-             ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/nul 34.68.161.68
+             ssh-keyscan 34.68.161.68
               
            
