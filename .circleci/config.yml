@@ -30,11 +30,10 @@ jobs:
           command: |
             . helloworld/bin/activate
             pyinstaller -F hello_world.py
-            docker build -t $DOCKER_LOGIN/$IMAGE_NAME:$TAG .
-            echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
-            docker push $DOCKER_LOGIN/$IMAGE_NAME:$TAG
+           
       - run:
           name: Deploy app to Linode Producrion Server via Docker
           command: |    
-             ssh  -o CheckHostIP=no 34.68.161.68
+             ssh  -o StrictHostKeyChecking=no   UserKnownHostsFile=/dev/null CheckHostIP=no 34.68.161.68
+              
            
