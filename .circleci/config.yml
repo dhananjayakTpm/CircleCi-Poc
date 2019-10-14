@@ -17,7 +17,7 @@ jobs:
             echo 'export IMAGE_NAME=python-circleci-docker' >> $BASH_ENV 
             virtualenv helloworld
             . helloworld/bin/activate
-            pip install --no-cache-dir -r requirements.txt
+        
       - run:
           name: Run Tests
           command: |
@@ -28,16 +28,13 @@ jobs:
       - run:
           name: Build and push Docker image
           command: |
-            . helloworld/bin/activate
-            pyinstaller -F hello_world.py
-            docker build -t $DOCKER_LOGIN/$IMAGE_NAME:$TAG .
-            echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
-            docker push $DOCKER_LOGIN/$IMAGE_NAME:$TAG
+            . helloworld/bin/activate     
            
       - run:
           name: Deploy app to Linode Producrion Server via Docker
           command: |    
              
-             ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no 34.68.161.68 "/bin/bash ./deploy_app.sh $DOCKER_LOGIN/$IMAGE_NAME:$TAG"
+             ssh -o BatchMode=yes -o StrictHostKeyChecking=no 34.68.161.68  "uptime"
+          
               
            
