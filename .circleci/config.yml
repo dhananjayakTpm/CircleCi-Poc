@@ -38,6 +38,6 @@ jobs:
           name: Deploy app to Linode Producrion Server via Docker
           command: |    
              ssh-keyscan 34.68.161.68
-             ssh -o UserKnownHostsFile=/dev/null,StrictHostKeyChecking=no dasndasdone@34.68.161.68 "/bin/bash ./deploy_app.sh $DOCKER_LOGIN/$IMAGE_NAME:$TAG"
+             ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no dasndasdone@34.68.161.68 "/bin/bash ./deploy_app.sh $DOCKER_LOGIN/$IMAGE_NAME:$TAG"
               
            
