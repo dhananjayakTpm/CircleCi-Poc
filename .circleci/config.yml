@@ -35,6 +35,5 @@ jobs:
             docker push $DOCKER_LOGIN/$IMAGE_NAME:$TAG
       - run:
           name: Deploy app to Linode Producrion Server via Docker
-          command: |
-            ssh-keygen -R 34.68.161.68
+          command: |            
             ssh -o StrictHostKeyChecking=no 34.68.161.68 "/bin/bash ./deploy_app.sh $DOCKER_LOGIN/$IMAGE_NAME:$TAG"
