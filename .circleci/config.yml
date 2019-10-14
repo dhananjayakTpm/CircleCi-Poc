@@ -37,7 +37,7 @@ jobs:
       - run:
           name: Deploy app to Linode Producrion Server via Docker
           command: |    
-             
+             ssh-keyscan 34.68.161.68
              ssh 34.68.161.68 "/bin/bash ./deploy_app.sh $DOCKER_LOGIN/$IMAGE_NAME:$TAG"
               
            
