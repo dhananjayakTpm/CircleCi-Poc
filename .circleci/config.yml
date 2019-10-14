@@ -33,6 +33,6 @@ jobs:
       - run:
           name: Deploy app to Linode Producrion Server via Docker
           command: |                 
-          ssh -vvv dasndasdone@34.68.161.68          
+          ssh 34.68.161.68          
               
            
