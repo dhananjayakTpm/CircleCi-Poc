@@ -11,7 +11,7 @@ jobs:
           fingerprints:
             - d4:f9:83:ad:c7:cf:31:d7:54:0d:13:8b:9d:36:16:cc
       - run:
-          name: Setup VirtualEnv
+          name: Setup Virtual Environment
           command: |
             echo 'export TAG=0.1.${CIRCLE_BUILD_NUM}' >> $BASH_ENV
             echo 'export IMAGE_NAME=python-circleci-docker' >> $BASH_ENV 
