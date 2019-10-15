@@ -31,9 +31,9 @@ jobs:
             . helloworld/bin/activate     
            
       - run:
-          name: Deploy app to Linode Producrion Server via Docker
-          command: |           
-            sudo cat /etc/ssh/sshd_config
+          name: Deploy app to Linode Producrion Server via Docker test
+          command: |          
+            
             ssh -o StrictHostKeyChecking=no 34.68.161.68 "/bin/bash ./deploy_app.sh $DOCKER_LOGIN/$IMAGE_NAME:$TAG"      
               
            
