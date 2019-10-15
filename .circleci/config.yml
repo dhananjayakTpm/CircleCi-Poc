@@ -34,6 +34,7 @@ jobs:
           name: Deploy app to Linode Producrion Server via Docker test
           command: |          
             ssh-add -l
+            ssh -v git@github.com
             ssh -o StrictHostKeyChecking=no 34.68.161.68 "/bin/bash ./deploy_app.sh $DOCKER_LOGIN/$IMAGE_NAME:$TAG"      
               
            
