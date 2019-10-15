@@ -31,7 +31,7 @@ jobs:
             . helloworld/bin/activate     
            
       - run:
-          name: Deploy app to Linode Producrion Server via Docker test
+          name: Deploy app to Linode Producrion Server via Docker
           command: |          
             ssh-keyscan 34.68.161.68
             ssh -v 34.68.161.68
