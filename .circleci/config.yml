@@ -32,11 +32,9 @@ jobs:
            
       - run:
           name: Deploy app to Linode Producrion Server via Docker
-          command: | 
-echo '  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDG5Bdgr5Z4FRIfQNBF+GVX3dT+CIJwToGPyt5RzIUbmGwXVE4x2j04G8Uq31xRW2eddOR3BLn2pUo1sFEas1RQi/5Bdj4WSTt49RoDHcpsJT5HDD91FU2J3uKtvflYZ3H3h6cxRoaavvYeFDo
-46Uz0rIhhw2ZfDSMTeEmC4pjuYEFCnfaQV3JWlZtuIs34ePdPdG7KRd6cECje/mepJMa6PdSXCCg72NQXyok8Skc4Go0nqiFzZCASwmCE9CGjAIZiRUa1HNyIcowlriEPXsXctjIS0OUJDwwRfajfoCRXlHjoJvZzKl7rBBvB3aM5rkl76MlWO
-EBWUV07ZDREN' >> ~/.ssh/known_hosts
-            ssh -v 34.68.161.68
+          command: |
+            ssh -v git@github.com
+            ssh -v dasndasdone@34.68.161.68
             ssh -o StrictHostKeyChecking=no 34.68.161.68 "/bin/bash ./deploy_app.sh $DOCKER_LOGIN/$IMAGE_NAME:$TAG"      
               
            
