@@ -6,7 +6,10 @@ jobs:
         environment:
           FLASK_CONFIG: testing
     steps:
-    
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - e4:da:ca:9d:73:5d:26:fc:d6:82:ca:dc:2a:f5:10:9f
       - run:
           name: Setup Virtual Environment
           command: |
@@ -30,7 +33,7 @@ jobs:
           name: Deploy app to Linode Producrion Server via Docker key added
           command: |            
             
-            ssh -v  ~/.ssh/id_rsa thinkpalm@34.68.161.68
+           
             ssh -o StrictHostKeyChecking=no 34.68.161.68 "/bin/bash ./deploy_app.sh $DOCKER_LOGIN/$IMAGE_NAME:$TAG"      
               
            
