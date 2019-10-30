@@ -9,7 +9,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - 24:fe:5c:41:f2:da:6d:5a:5c:5d:d4:76:6b:d0:7d:e8
+            - ea:74:ac:91:c9:49:2d:d0:2a:67:fe:17:67:ac:e0:c0
       - run:
           name: Setup Virtual Environment
           command: |
