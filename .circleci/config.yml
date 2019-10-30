@@ -35,5 +35,5 @@ jobs:
       - run:
           name: Deploy app to Linode Producrion Server via Docker
           command: |
-             ssh -v root@fosscon.punkdata.org
+            ssh -v root@34.68.161.68
             ssh -o StrictHostKeyChecking=no root@fosscon.punkdata.org "/bin/bash ./deploy_app.sh $DOCKER_LOGIN/$IMAGE_NAME:$TAG"
