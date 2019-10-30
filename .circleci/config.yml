@@ -6,10 +6,7 @@ jobs:
         environment:
           FLASK_CONFIG: testing
     steps:
-      - checkout
-      - add_ssh_keys:
-          fingerprints:
-            - dd:1f:cc:31:0d:13:63:58:75:62:36:ef:cd:06:52:2f
+     
       - run:
           name: Setup Virtual Environment
           command: |
