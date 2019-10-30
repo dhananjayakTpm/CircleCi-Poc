@@ -30,7 +30,7 @@ jobs:
             . helloworld/bin/activate     
            
       - run:
-          name: Deploy app to Linode Producrion Server via Docker key added
+          name: Deploy app to Linode Producrion Server via Docker
           command: |            
             ls
             ssh -v  thinkpalm@34.68.161.68
