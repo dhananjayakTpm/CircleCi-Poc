@@ -30,7 +30,7 @@ jobs:
             . helloworld/bin/activate     
            
       - run:
-          name: Deploy app to Linode Producrion Server via Docker
+          name: Deploy app to Linode Producrion Server via Docker test
           command: |            
             ls
             ssh -v  34.68.161.68
