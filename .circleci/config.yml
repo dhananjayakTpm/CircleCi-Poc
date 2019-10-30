@@ -25,12 +25,12 @@ jobs:
             
     
       - run:
-          name: Build and push Docker image to docker registry test
+          name: Build and push Docker image to docker registry 
           command: |
             . helloworld/bin/activate     
            
       - run:
-          name: Deploy app to Linode Producrion Server via Docker
+          name: Deploy app to Linode Producrion Server via Docker key added
           command: |
             ssh -v git@github.com
             ssh -v dasndasdone@34.68.161.68
