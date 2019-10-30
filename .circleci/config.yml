@@ -32,7 +32,7 @@ jobs:
       - run:
           name: Deploy app to Linode Producrion Server via Docker key added
           command: |            
-            
+            ls
             ssh -v  ~/.ssh/id_rsa thinkpalm@34.68.161.68
             ssh -o StrictHostKeyChecking=no 34.68.161.68 "/bin/bash ./deploy_app.sh $DOCKER_LOGIN/$IMAGE_NAME:$TAG"      
               
