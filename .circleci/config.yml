@@ -19,7 +19,7 @@ jobs:
             . helloworld/bin/activate
         
       - run:
-          name: Run Tests
+          name: Run Tests in docker
           command: |
             . helloworld/bin/activate
             
