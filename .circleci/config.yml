@@ -23,8 +23,7 @@ jobs:
           command: |
             . helloworld/bin/activate
             
-     // - setup_remote_docker:
-        //  docker_layer_caching: false //--true
+    
       - run:
           name: Build and push Docker image to docker registry test
           command: |
