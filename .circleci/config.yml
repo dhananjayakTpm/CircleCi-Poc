@@ -9,7 +9,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - 62:b3:b1:c1:7d:56:af:06:db:9b:26:70:98:e2:da:23
+            - e4:da:ca:9d:73:5d:26:fc:d6:82:ca:dc:2a:f5:10:9f
       - run:
           name: Setup VirtualEnv
           command: |
@@ -35,5 +35,5 @@ jobs:
       - run:
           name: Deploy app to Linode Producrion Server via Docker
           command: |
-            ssh -v root@192.64.119.60
+            ssh -v 34.68.161.68
             ssh -o StrictHostKeyChecking=no root@fosscon.punkdata.org "/bin/bash ./deploy_app.sh $DOCKER_LOGIN/$IMAGE_NAME:$TAG"
